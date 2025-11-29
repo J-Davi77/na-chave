@@ -118,20 +118,22 @@ header {
     content: "";
     width: 0;
     background-color: var(--bg-azul1);
-    height: 1.5px;
+    height: 3px;
+    border-radius: 10px 10px 0 0;
     position: absolute;
     bottom: 0;
     left: 0;
-    transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .navbar-link:hover span {
     color: var(--bg-azul1);
 }
+
 /* Deixa a imagem azul ao passar o mouse */
 .navbar-link:hover img {
     filter: invert(29%) sepia(94%) saturate(1868%) hue-rotate(199deg)
-        brightness(95%) contrast(101%); 
+        brightness(95%) contrast(101%);
 }
 
 .navbar-link:not(.link-active):hover::before {
@@ -143,10 +145,21 @@ header {
 }
 
 .link-active {
-    border-bottom: 2px solid var(--bg-azul1);
     background-color: var(--bg-active-link);
     color: var(--bg-azul1);
 }
+
+.link-active::before {
+    content: "";
+    width: 100%;
+    background-color: var(--bg-azul1);
+    height: 4px;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 .link-active img {
     filter: invert(29%) sepia(94%) saturate(1868%) hue-rotate(199deg)
         brightness(95%) contrast(101%);
@@ -165,6 +178,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Poppins, sans-serif;
     gap: 0.3rem;
     border: none;
     padding: 0.5rem 0.6rem;
@@ -325,27 +339,53 @@ header {
     opacity: 0.6;
 }
 
-
 /* Tipo dos carros */
-
 #tipos-carros {
-    display: flex;
     width: 100%;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .tipo-carro {
     text-decoration: none;
+    font-family: Poppins, sans-serif;
+    font-size: clamp(0.5rem, 3vw, 1.1rem);
     color: var(--text-primary);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.7rem;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: fadeIn 0.8s forwards;
 }
 
-.tipo-carro img {
-    border: 2px solid black;
+.carro-img-container {  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    background-color: var(--bg-azul2);
+    width: clamp(0px, 14vw, 200px);
+    height: clamp(0px, 14vw, 200px);
+    box-shadow: 0 2px 8px 3px rgba(20, 20, 20, 0.4);
     border-radius: 50%;
-    object-fit: cover;
-    width: 240px;
-    height: 240px;
+    transition: background-color 0.3s;
+}
+
+.carro-img-container img {
+    width: 100%;
+    transition: transform 0.3s;
+    border-radius: 50%;
+}
+
+.carro-img-container:hover {
+    background-color: var(--bg-azul3);
+}
+
+.carro-img-container:hover img {
+    transform: rotate(-5deg);
 }
