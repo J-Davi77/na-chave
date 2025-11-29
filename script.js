@@ -1,9 +1,8 @@
-// Adiciona os tooltips do Bootstrap depois que o DOM for carregado
-window.addEventListener("DOMContentLoaded", () => {
-    const tooltipTriggerList = document.querySelectorAll(
-        '[data-bs-toggle="tooltip"]'
-    );
-    const tooltipList = [...tooltipTriggerList].map(
-        (el) => new bootstrap.Tooltip(el)
-    );
-});
+const header = document.querySelector('header');
+const menuBtn = document.querySelector("#menu-btn");
+
+function toggleMenu() {
+    header.classList.toggle('show');
+}
+
+menuBtn.addEventListener('click', toggleMenu);
