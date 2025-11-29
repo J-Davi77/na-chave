@@ -1,0 +1,123 @@
+/* Define a fonte efour pro */
+@font-face {
+    font-family: EfourPro;
+    src: url("/assets/fonts/Efourpro-OPrP.ttf");
+}
+
+/* Variáveis de cores */
+:root {
+    --bg-body: rgba(45, 45, 45);
+    --bg-header: rgba(45, 45, 45, 0.85);
+    --bg-primary: rgba(0, 160, 255);
+    --bg-secondary: rgba(0, 108, 255);
+    --text-primary: rgb(255, 255, 255);
+    --text-link: rgb(225, 225, 225);
+}
+
+/* Animação ao entrar no site */
+
+@keyframes show {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-family: EfourPro, sans-serif !important;
+    font-weight: bold !important;
+    color: var(--text-primary) !important;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+h1 img {
+    opacity: 0;
+    animation-delay: 1s;
+    transform: translateY(-100%);
+    animation: fadeIn 1.5s forwards;
+}
+
+body {
+    background-color: var(--bg-body) !important;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(4px);
+    padding: 0.5rem 6%;
+    position: sticky;
+    top: 0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 10px rgba(100, 100, 100, 0.25);
+    background-color: var(--bg-header);
+    transform: translateY(-100%);
+    animation: show 0.5s forwards;
+}
+
+p {
+    color: var(--text-primary);
+    margin: 0 5rem;
+}
+
+/* Navbar principal */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Links de navegação */
+.navbar-link {
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    flex-direction: column;
+    color: var(--text-link);
+    font-size: 11px;
+    font-weight: 500;
+    transition: transform 0.3s;
+}
+
+/* Ícones das páginas */
+.navbar-link img {
+    width: 50px;
+    height: 50px;
+    padding: 0.6rem;
+    border-radius: 50%;
+    transition: background-color 0.25s;
+}
+
+.navbar-link:hover {
+    transform: scale(1.1);
+}
+.navbar-link:hover img {
+    background-color: rgba(0, 108, 255);
+}
+.tooltip-inner {
+    font-family: Poppins, sans-serif;
+}
+
+/* Ícone da página atual */
+.active img {
+    background-color: var(--bg-primary);
+}
