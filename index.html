@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css" />
         <link
             rel="shortcut icon"
-            href="/assets/imgs/favicon.png"
+            href="assets/imgs/favicon.png"
             type="image/x-icon"
         />
         <script src="script.js" defer></script>
@@ -88,6 +88,115 @@
         </header>
 
         <main class="d-flex align-items-center flex-column gap-5 mt-5">
+            <!-- Carrossel -->
+            <div
+                id="carrosselNachave"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                style="width: clamp(100px, 90%, 1000px)"
+            >
+                <div class="carousel-inner">
+                    <!-- SLIDE 1 — HERO -->
+                    <div class="carousel-item active">
+                        <div
+                            class="d-flex flex-column align-items-center justify-content-center p-4"
+                            style="height: 350px"
+                        >
+                            <span
+                                class="fs-3 d-flex align-items-center gap-2 brand"
+                            >
+                                <img
+                                    src="assets/imgs/favicon.png"
+                                    width="45"
+                                    alt="Logo"
+                                />
+                                <h3
+                                    class="m-0 fs-1"
+                                    style="font-family: Efourpro"
+                                >
+                                    <span class="fs-1">N</span>a<span
+                                        class="fs-1"
+                                        >C</span
+                                    >have
+                                </h3>
+                            </span>
+
+                            <h2
+                                class="fs-1 text-white mt-3 text-center fw-bold text-shadow"
+                                style="
+                                    font-family: Poppins, sans-serif;
+                                    font-style: italic;
+                                "
+                            >
+                                SUA VIAGEM
+                                <br />
+                                COMEÇA AQUI
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 — MAIS BUSCADOS -->
+                    <div class="carousel-item">
+                        <div
+                            class="d-flex flex-column align-items-center justify-content-center p-4"
+                            style="height: 350px"
+                        >
+                            <h2 class="nome-carrossel fw-bold fs-1">
+                                Mais buscados
+                            </h2>
+
+                            <p class="desc-carrossel text-center">
+                                Veja os carros mais buscados da empresa.
+                            </p>
+
+                            <button class="btn btn-primary btn-lg mt-2">
+                                Ver mais
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3 — RECOMENDADOS -->
+                    <div class="carousel-item">
+                        <div
+                            class="d-flex flex-column align-items-center justify-content-center p-4"
+                            style="height: 350px"
+                        >
+                            <h2 class="nome-carrossel fw-bold fs-1">
+                                Recomendados
+                            </h2>
+
+                            <p class="desc-carrossel text-center">
+                                Veja quais são os melhores automóveis do
+                                momento, segundo a comunidade de clientes.
+                            </p>
+
+                            <button class="btn btn-primary btn-lg mt-2">
+                                Os melhores
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTROLES -->
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carrosselNachave"
+                    data-bs-slide="prev"
+                >
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carrosselNachave"
+                    data-bs-slide="next"
+                >
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
             <div id="search-container">
                 <img
                     src="assets/imgs/pesquisa.svg"
@@ -101,6 +210,8 @@
                     autocomplete="off"
                 />
             </div>
+
+            <h2 class="fs-1 fw-bold">Carrocerias</h2>
             <div id="tipos-carros">
                 <div class="tipo-carro">
                     <a href="#" class="carro-img-container">
