@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a fonte efour pro */
+@font-face {
+    font-family: EfourPro;
+    src: url("assets/fonts/Efourpro-OPrP.ttf");
+}
+
+/* Variáveis de cores */
+:root {
+    --bg-body: rgba(45, 45, 45);
+    --bg-header: rgba(45, 45, 45, 0.85);
+    --bg-cinza-claro: rgb(84, 84, 84);
+    --bg-azul1: #00abff;
+    --bg-azul2: rgb(0, 110, 255);
+    --bg-azul3: rgb(5, 93, 209);
+    --text-primary: #e8edf4;
+    --text-link: rgb(0, 67, 154);
+    --bg-active-link: rgb(0, 110, 255, 0.03);
+}
+
+* {
+    color: var(--text-primary);
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background-color: var(--bg-body) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    letter-spacing: 1px;
+}
+@keyframes fadeIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+form {
+    background: linear-gradient(45deg, var(--bg-azul1), var(--bg-azul3));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    width: clamp(220px, 80%, 500px);
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2);
+    /* opacity: 0;
+    transform: translateY(30%);
+    animation: fadeIn 0.6s 0.15s forwards; */
+}
+
+.beneficio-para {
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+.input-container input {
+    width: 90%;
+    height: 50px;
+    padding: 1rem 1.2rem;
+    font-size: 20px;
+    border: none;
+    color: var(--text-primary);
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--bg-body);
+}
+
+.input-container label {
+    pointer-events: none;
+    font-size: 1.1rem;
+    position: absolute;
+    left: 9%;
+    opacity: 0.75;
+    transition: all 0.3s;
+}
+
+.input-container img {
+    position: absolute;
+    right: 8%;
+    width: 30px;
+}
+
+label.onfocus {
+    transform: translate(-19%, -150%);
+    font-weight: 500;
+    opacity: 1;
+}
+
+/* Botão do form */
+#submit-btn {
+    background-color: var(--bg-azul3);
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.6px;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    transition: 0.3s;
+    position: relative;
+    margin-bottom: 1.2rem;
+}
+
+#submit-btn img {
+    position: absolute;
+    left: 62%;
+    width: 27px;
+    opacity: 0;
+    transform: translateY(30%) rotate(-20deg);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#submit-btn:hover {
+    transform: scale(1.03);
+    opacity: 0.95;
+}
+
+#submit-btn:hover img {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+}
+
+/* Separador do */
+
+#separador-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.separador {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 1px;
+}
+
+#separador-txt {
+    width: 160px;
+    text-align: center;
+}
+
+#alternativas-login {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.alternativa-login {
+    background: var(--bg-body);
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    letter-spacing: 0.4px;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    gap: 1rem;
+    transition: 0.3s;
+}
+
+.alternativa-login:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.google img {
+    width: clamp(18px, 5vw, 32px);
+}
+
+.facebook img {
+    width: clamp(30px, 6vw, 40px);
+}
+
+#cadastro-p {
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+}
+
+#cadastro-p span {
+    opacity: 0.75;
+}
+
+#cadastro-p a {
+    text-decoration: none;
+    color: var(--text-link);
+    font-weight: 600;
+}
+
+#inicio-link {
+    opacity: 0.75;
+    text-decoration: none;
+    transition: all 0.25s;
+}
+
+#inicio-link:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+#inicio-link img {
+    transition: 0.25s;
+}
+#inicio-link:hover img {
+    transform: translateX(-5px)
+}

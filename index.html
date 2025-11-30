@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Na Chave - Início</title>
+        <title>NaChave - Início</title>
         <link rel="stylesheet" href="style.css" />
         <link
             rel="shortcut icon"
-            href="/assets/imgs/favicon.png"
+            href="assets/imgs/favicon.png"
             type="image/x-icon"
         />
         <script src="script.js" defer></script>
@@ -72,14 +72,18 @@
             </nav>
 
             <div class="buttons-container">
-                <button id="login-btn">
-                    <img src="assets/imgs/login.svg" alt="Login" />
-                    <span>Entrar</span>
-                </button>
-                <button id="cadastro-btn">
-                    <img src="assets/imgs/conta.svg" alt="Conta" />
-                    <span>Criar conta</span>
-                </button>
+                <a href="/login/login.html" target="_blank">
+                    <button id="login-btn">
+                        <img src="assets/imgs/login.svg" alt="Login" />
+                        <span>Entrar</span>
+                    </button>
+                </a>
+                <a href="#">
+                    <button id="cadastro-btn">
+                        <img src="assets/imgs/conta.svg" alt="Conta" />
+                        <span>Criar conta</span>
+                    </button>
+                </a>
             </div>
 
             <button id="menu-btn">
@@ -88,6 +92,84 @@
         </header>
 
         <main class="d-flex align-items-center flex-column gap-5 mt-5">
+            <!-- Carrossel -->
+            <div
+                id="carrosselNachave"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                style="width: clamp(100px, 90%, 1000px)"
+            >
+                <div class="carousel-inner">
+                    <!-- SLIDE 1 — HERO -->
+                    <div class="carousel-item active" id="hero">
+                        <div
+                            class="d-flex flex-column align-items-center justify-content-center p-4"
+                            style="height: 350px"
+                        ></div>
+                    </div>
+
+                    <!-- SLIDE 2 — MAIS BUSCADOS -->
+                    <div class="carousel-item" id="buscados">
+                        <div
+                            class="d-flex flex-column align-items-center justify-content-center p-4"
+                            style="height: 350px"
+                        >
+                            <h2 class="nome-carrossel fw-bold fs-1">
+                                Mais buscados
+                            </h2>
+
+                            <p class="desc-carrossel text-center">
+                                Veja os carros mais buscados da empresa.
+                            </p>
+
+                            <button class="btn btn-primary btn-lg mt-2">
+                                Ver mais
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3 — RECOMENDADOS -->
+                    <div class="carousel-item" id="recomendados">
+                        <div
+                            class="d-flex flex-column align-items-center justify-content-center p-4"
+                            style="height: 350px"
+                        >
+                            <h2 class="nome-carrossel fw-bold fs-1">
+                                Recomendados
+                            </h2>
+
+                            <p class="desc-carrossel text-center">
+                                Veja quais são os melhores automóveis do
+                                momento, segundo a comunidade de clientes.
+                            </p>
+
+                            <button class="btn btn-primary btn-lg mt-2">
+                                Os melhores
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTROLES -->
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carrosselNachave"
+                    data-bs-slide="prev"
+                >
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carrosselNachave"
+                    data-bs-slide="next"
+                >
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
             <div id="search-container">
                 <img
                     src="assets/imgs/pesquisa.svg"
@@ -101,6 +183,8 @@
                     autocomplete="off"
                 />
             </div>
+
+            <h2 id="carrocerias">Carrocerias</h2>
             <div id="tipos-carros">
                 <div class="tipo-carro">
                     <a href="#" class="carro-img-container">
@@ -136,6 +220,88 @@
                     <span>SUV</span>
                 </div>
             </div>
+
+            <!--Mapas-->
+            <div id="mapas">
+                <!--Mapa Etec-->
+                <div id="end1">
+                    <h1>Loja Guilhermina</h1>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.6383833920845!2d-46.438026588510375!3d-24.008543478084587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1d5858ac3641%3A0x99fe8e3b11617077!2sEtec%20de%20Praia%20Grande!5e0!3m2!1sen!2sbr!4v1764480765936!5m2!1sen!2sbr"
+                        width="460"
+                        height="345"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+
+                <!--Mapa Miguel-->
+                <div id="end2">
+                    <h1>Loja Tupi</h1>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.2110095388593!2d-46.464362699999995!3d-24.0236231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1e58c31b032d%3A0x6e83eaa0011b2c7e!2sR.%20Caraj%C3%A1s%2C%2061%20-%20Vila%20Tupi%2C%20Praia%20Grande%20-%20SP%2C%2011703-740!5e0!3m2!1sen!2sbr!4v1764480611066!5m2!1sen!2sbr"
+                        width="460"
+                        height="345"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
         </main>
+
+        <hr />
+
+        <!--Formulário feedback-->
+        <section
+            id="feedback"
+            class="d-flex flex-column align-items-center mt-5 gap-3"
+        >
+            <h2 class="fs-2 fw-bold">Feedback</h2>
+            <p class="text-center" style="max-width: 600px">
+                Nos diga o que achou da plataforma. Seu feedback nos ajuda a
+                melhorar!
+            </p>
+
+            <form
+                id="feedback-form"
+                class="d-flex flex-column align-items-center gap-3"
+                style="width: clamp(200px, 90%, 600px)"
+            >
+                <textarea
+                    id="feedback-text"
+                    class="form-control p-3"
+                    rows="4"
+                    placeholder="Digite seu feedback..."
+                    required
+                ></textarea>
+
+                <button
+                    type="submit"
+                    id="btn-enviar-feedback"
+                    class="btn btn-primary btn-lg w-100 d-flex align-items-center justify-content-center gap-2"
+                >
+                    <span>Enviar feedback</span>
+                    <img
+                        src="assets/imgs/send.svg"
+                        alt="Enviar feedback"
+                        width="30"
+                    />
+                </button>
+            </form>
+        </section>
+
+        <hr />
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">
+                    &copy; 2025 NaChave Todos os direitos reservados
+                </p>
+            </div>
+        </footer>
     </body>
 </html>
