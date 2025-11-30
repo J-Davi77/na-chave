@@ -22,6 +22,7 @@ tiposCarros.forEach((tipo) => {
     tipo.style.animationDelay = `${animationDelay}s`;
     animationDelay += 0.1;
     observer.observe(tipo);
+    observer.observe(tipo);
 });
 
 function toggleMenu() {

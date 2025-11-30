@@ -8,6 +8,7 @@
 @font-face {
     font-family: EfourPro;
     src: url("assets/fonts/Efourpro-OPrP.ttf");
+    src: url("assets/fonts/Efourpro-OPrP.ttf");
 }
 
 /* Variáveis de cores */
@@ -75,6 +76,7 @@ header {
     padding: 0 4%;
     position: sticky;
     top: 0;
+    z-index: 67;
     z-index: 67;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 10px rgba(100, 100, 100, 0.25);
@@ -247,6 +249,7 @@ a {
         height: 70px;
         overflow: hidden;
         transition: 0.5s;
+        transition: 0.5s;
     }
 
     #menu-btn {
@@ -400,9 +403,12 @@ a {
 #tipos-carros {
     width: 100%;
     padding: 0 5%;
+    padding: 0 5%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-content: center;
+    gap: 0.1rem;
     align-content: center;
     gap: 0.1rem;
 }
@@ -411,11 +417,13 @@ a {
     text-decoration: none;
     font-family: Poppins, sans-serif;
     font-size: clamp(0.6rem, 3vw, 1.1rem);
+    font-size: clamp(0.6rem, 3vw, 1.1rem);
     color: var(--text-primary);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.6rem;
     gap: 0.6rem;
     opacity: 0;
     transform: translateY(40%);
@@ -432,6 +440,7 @@ a {
     transform: translateY(40%);
 }
 
+.carro-img-container {
 .carro-img-container {
     display: flex;
     align-items: center;
