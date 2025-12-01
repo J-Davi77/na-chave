@@ -24,7 +24,8 @@
     --bg-active-link: linear-gradient(
         rgba(0, 110, 255, 0.05),
         rgba(0, 110, 255, 0.25)
-    )}
+    );
+}
 
 /* Animação ao entrar no site */
 
@@ -352,8 +353,8 @@ a {
     background-color: var(--bg-azul2) !important;
     border: 0px;
 }
-#buscados p{
-        font-family: 'Bebas Neue', sans-serif;
+#buscados p {
+    font-family: "Bebas Neue", sans-serif;
     font-size: 20px;
     color: #ffffff; /* branco */
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6); /* sombra preta suave */
@@ -361,13 +362,13 @@ a {
 }
 /* Carrossel 3 (Recomendados) */
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 #recomendados {
     background-image: url("assets/imgs/carrossel3.png");
-    background-size: 1000px 450px; 
+    background-size: 1000px 450px;
 }
-#recomendados p{
-    font-family: 'Bebas Neue', sans-serif;
+#recomendados p {
+    font-family: "Bebas Neue", sans-serif;
     font-size: 20px;
     color: #ffffff; /* branco */
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6); /* sombra preta suave */
@@ -476,7 +477,6 @@ a {
     transition: 0.3s ease;
 }
 
-
 .tipo-carro:hover small {
     opacity: 1;
     visibility: visible;
@@ -491,22 +491,19 @@ a {
     color: var(--text-secondary);
 }
 
-
-.carro-img-container:hover:hover .explicacao{
+.carro-img-container:hover:hover .explicacao {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 .tipo-carro.animated {
     animation: fadeIn 0.8s forwards;
-    
 }
 
 .tipo-carro.hide {
     opacity: 0;
     transform: translateY(40%);
 }
-
 
 .carro-img-container {
     display: flex;
@@ -530,7 +527,6 @@ a {
 .carro-img-container:hover {
     background-color: var(--bg-azul3);
 }
-
 
 .carro-img-container:hover img {
     transform: rotate(-5deg);
@@ -564,7 +560,6 @@ footer {
 
 /* =============== AJUSTES PARA CELULAR (até 600px) =============== */
 @media (max-width: 600px) {
-
     /* TÍTULO */
     #tipo {
         font-size: 28px !important;
@@ -576,6 +571,10 @@ footer {
     }
 
     /* HEADER */
+
+    header.show {
+        height: 500px;
+    }
     h1 img {
         width: 45px;
     }
