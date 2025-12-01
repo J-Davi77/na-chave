@@ -14,8 +14,8 @@
 /* Variáveis de cores */
 :root {
     --bg-body: rgba(45, 45, 45);
-    --bg-header: rgba(45, 45, 45, 0.85);
-    --bg-cinza-claro: rgb(84, 84, 84);
+    --bg-cinza-claro: rgb(70, 70, 70);
+    --bg-header: rgba(70, 70, 70, 0.95);
     --bg-azul1: rgb(0, 171, 255);
     --bg-azul2: rgb(0, 110, 255);
     --bg-azul3: rgb(5, 93, 209);
@@ -67,22 +67,17 @@ body {
 }
 
 /* Header */
-header.show {
-    height: auto;
-    padding-bottom: 2rem;
-}
 header {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(4px);
     height: 75px;
     padding: 0 4%;
     position: sticky;
     top: 0;
-    z-index: 67;
     z-index: 67;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 10px rgba(100, 100, 100, 0.25);
@@ -597,7 +592,6 @@ footer {
 
 /* =============== AJUSTES MINI-CELULAR (até 400px) =============== */
 @media (max-width: 400px) {
-
     #mapas iframe {
         height: 250px;
     }
