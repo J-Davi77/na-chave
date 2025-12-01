@@ -109,6 +109,10 @@ label.onfocus {
     opacity: 1;
 }
 
+#mask-password {
+    cursor: pointer;
+}
+
 /* Botão do form */
 #submit-btn {
     background-color: var(--bg-azul3);

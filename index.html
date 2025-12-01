@@ -167,66 +167,90 @@
                     data-bs-target="#carrosselNachave"
                     data-bs-slide="next"
                 >
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
 
-            <div id="search-container">
-                <img
-                    src="assets/imgs/pesquisa.svg"
-                    width="30"
-                    id="search-img"
-                />
-                <input
-                    placeholder="Encontre o seu carro"
-                    id="search-input"
-                    maxlength="150"
-                    autocomplete="off"
-                />
-            </div>
+        
+        <h2 id="tipo">TIPOS DE CARROS</h2>
+        <!-- Barra de pesquisa-->
+        <div id="search-container">
 
-            <h2 id="carrocerias">Carrocerias</h2>
+            <img
+                src="assets/imgs/pesquisa.svg"
+                width="30"
+                id="search-img"
+            />
+            <input
+                placeholder="Encontre o seu carro"
+                id="search-input"
+                maxlength="150"
+                autocomplete="off"
+            />
+        </div>
+
             <div id="tipos-carros">
+                <!-- SEDAN -->
                 <div class="tipo-carro">
                     <a href="#" class="carro-img-container">
                         <img src="assets/imgs/sedan.png" alt="Carro sedan" />
                     </a>
-                    <span>Sedan</span>
+                    <span class="nome-mod">Sedan</span>
+                    <small class="explicacao">
+                        Espaçoso, confortável e ideal para famílias que buscam conforto e segurança.
+                    </small>
                 </div>
+            
+                <!-- PICAPE -->
                 <div class="tipo-carro">
                     <a href="#" class="carro-img-container">
                         <img src="assets/imgs/picape.png" alt="Carro picape" />
                     </a>
-                    <span>Picape</span>
+                    <span class="nome-mod">Picape</span>
+                    <small class="explicacao">
+                        Potente, resistente e perfeita para trabalho pesado ou viagens longas.
+                    </small>
                 </div>
+            
+                <!-- HATCH -->
                 <div class="tipo-carro">
                     <a href="#" class="carro-img-container">
                         <img src="assets/imgs/hatch.png" alt="Carro hatch" />
                     </a>
-                    <span>Hatch</span>
+                    <span class="nome-mod">Hatch</span>
+                    <small class="explicacao">
+                        Compacto, econômico e fácil de manobrar — ideal para o dia a dia na cidade.
+                    </small>
                 </div>
+            
+                <!-- ESPORTIVO-->
                 <div class="tipo-carro">
                     <a href="#" class="carro-img-container">
-                        <img
-                            src="assets/imgs/esportivo.png"
-                            alt="Carro esportivo"
-                        />
+                        <img src="assets/imgs/esportivo.png" alt="Carro esportivo">
                     </a>
-                    <span>Esportivo</span>
+                    <span class="nome-mod">Esportivo</span>
+                    <small class="explicacao">
+                        Rápido, agressivo e feito pra quem curte desempenho, adrenalina e design marcante.
+                    </small>
                 </div>
+                <!-- SUV -->
                 <div class="tipo-carro">
                     <a href="#" class="carro-img-container">
                         <img src="assets/imgs/suv.png" alt="Carro SUV" />
                     </a>
-                    <span>SUV</span>
+                    <span class="nome-mod">SUV</span>
+                    <small class="explicacao">
+                        Alto, confortável e versátil, ótimo para viagens e terrenos variados.
+                    </small>
                 </div>
             </div>
+            
 
             <!--Mapas-->
             <div id="mapas">
                 <!--Mapa Etec-->
                 <div id="end1">
-                    <h1>Loja Guilhermina</h1>
+                    <h1>Ponto Guilhermina</h1>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.6383833920845!2d-46.438026588510375!3d-24.008543478084587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1d5858ac3641%3A0x99fe8e3b11617077!2sEtec%20de%20Praia%20Grande!5e0!3m2!1sen!2sbr!4v1764480765936!5m2!1sen!2sbr"
                         width="460"
@@ -240,7 +264,7 @@
 
                 <!--Mapa Miguel-->
                 <div id="end2">
-                    <h1>Loja Tupi</h1>
+                    <h1>Ponto Tupi</h1>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.2110095388593!2d-46.464362699999995!3d-24.0236231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1e58c31b032d%3A0x6e83eaa0011b2c7e!2sR.%20Caraj%C3%A1s%2C%2061%20-%20Vila%20Tupi%2C%20Praia%20Grande%20-%20SP%2C%2011703-740!5e0!3m2!1sen!2sbr!4v1764480611066!5m2!1sen!2sbr"
                         width="460"

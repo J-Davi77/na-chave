@@ -1,7 +1,6 @@
 const header = document.querySelector("header");
 const menuBtn = document.querySelector("#menu-btn");
 const tiposCarros = document.querySelectorAll(".tipo-carro");
-const mapas = document.getElementById("mapas");
 let animationDelay = 0;
 
 const observer = new IntersectionObserver((entries) => {
@@ -21,7 +20,6 @@ const observer = new IntersectionObserver((entries) => {
 tiposCarros.forEach((tipo) => {
     tipo.style.animationDelay = `${animationDelay}s`;
     animationDelay += 0.1;
-    observer.observe(tipo);
     observer.observe(tipo);
 });
 
