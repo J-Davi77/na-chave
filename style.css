@@ -362,7 +362,7 @@ a {
 #buscados p {
     font-family: "Bebas Neue", sans-serif;
     font-size: 20px;
-    color: #ffffff; /* branco */
+    color: var(--text-primary); /* branco */
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6); /* sombra preta suave */
     letter-spacing: 2px;
 }
