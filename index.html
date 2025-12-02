@@ -46,11 +46,11 @@
             <!-- Navbar principal -->
             <nav id="navbar">
                 <a class="navbar-link link-active" href="#">
-                    <img src="assets/imgs/home.svg" alt="Início" /><span
+                    <img src="assets/imgs/home-filled.svg" alt="Início" /><span
                         >Início</span
                     ></a
                 >
-                <a class="navbar-link" href="#">
+                <a class="navbar-link" href="carros/carros.html">
                     <img src="assets/imgs/carro.svg" alt="Carro" /><span
                         >Alugar</span
                     ></a
@@ -98,22 +98,19 @@
                 id="carrosselNachave"
                 class="carousel slide"
                 data-bs-ride="carousel"
-                style="width: clamp(100px, 90%, 1000px)"
             >
                 <div class="carousel-inner">
                     <!-- SLIDE 1 — HERO -->
                     <div class="carousel-item active" id="hero">
                         <div
                             class="d-flex flex-column align-items-center justify-content-center p-4"
-                            style="height: 350px"
                         ></div>
                     </div>
 
                     <!-- SLIDE 2 — MAIS BUSCADOS -->
                     <div class="carousel-item" id="buscados">
                         <div
-                            class="d-flex flex-column align-items-center justify-content-center p-4"
-                            style="height: 350px"
+                            class="d-flex flex-column align-items-center justify-content-center p-4 w-100 h-100"
                         >
                             <h2 class="nome-carrossel fw-bold fs-1">
                                 Mais buscados
@@ -132,8 +129,7 @@
                     <!-- SLIDE 3 — RECOMENDADOS -->
                     <div class="carousel-item" id="recomendados">
                         <div
-                            class="d-flex flex-column align-items-center justify-content-center p-4"
-                            style="height: 350px"
+                            class="d-flex flex-column align-items-center justify-content-center p-4 h-100 w-100"
                         >
                             <h2 class="nome-carrossel fw-bold fs-1">
                                 Recomendados
@@ -167,27 +163,25 @@
                     data-bs-target="#carrosselNachave"
                     data-bs-slide="next"
                 >
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
 
-        
-        <h2 id="tipo">TIPOS DE CARROS</h2>
-        <!-- Barra de pesquisa-->
-        <div id="search-container">
-
-            <img
-                src="assets/imgs/pesquisa.svg"
-                width="30"
-                id="search-img"
-            />
-            <input
-                placeholder="Encontre o seu carro"
-                id="search-input"
-                maxlength="150"
-                autocomplete="off"
-            />
-        </div>
+            <h2 id="tipo">TIPOS DE CARROS</h2>
+            <!-- Barra de pesquisa-->
+            <div id="search-container">
+                <img
+                    src="assets/imgs/pesquisa.svg"
+                    width="30"
+                    id="search-img"
+                />
+                <input
+                    placeholder="Encontre o seu carro..."
+                    id="search-input"
+                    maxlength="150"
+                    autocomplete="off"
+                />
+            </div>
 
             <div id="tipos-carros">
                 <!-- SEDAN -->
@@ -197,10 +191,11 @@
                     </a>
                     <span class="nome-mod">Sedan</span>
                     <small class="explicacao">
-                        Espaçoso, confortável e ideal para famílias que buscam conforto e segurança.
+                        Espaçoso, confortável e ideal para famílias que buscam
+                        conforto e segurança.
                     </small>
                 </div>
-            
+
                 <!-- PICAPE -->
                 <div class="tipo-carro">
                     <a href="#" class="carro-img-container">
@@ -208,10 +203,11 @@
                     </a>
                     <span class="nome-mod">Picape</span>
                     <small class="explicacao">
-                        Potente, resistente e perfeita para trabalho pesado ou viagens longas.
+                        Potente, resistente e perfeita para trabalho pesado ou
+                        viagens longas.
                     </small>
                 </div>
-            
+
                 <!-- HATCH -->
                 <div class="tipo-carro">
                     <a href="#" class="carro-img-container">
@@ -219,18 +215,23 @@
                     </a>
                     <span class="nome-mod">Hatch</span>
                     <small class="explicacao">
-                        Compacto, econômico e fácil de manobrar — ideal para o dia a dia na cidade.
+                        Compacto, econômico e fácil de manobrar — ideal para o
+                        dia a dia na cidade.
                     </small>
                 </div>
-            
+
                 <!-- ESPORTIVO-->
                 <div class="tipo-carro">
                     <a href="#" class="carro-img-container">
-                        <img src="assets/imgs/esportivo.png" alt="Carro esportivo">
+                        <img
+                            src="assets/imgs/esportivo.png"
+                            alt="Carro esportivo"
+                        />
                     </a>
                     <span class="nome-mod">Esportivo</span>
                     <small class="explicacao">
-                        Rápido, agressivo e feito pra quem curte desempenho, adrenalina e design marcante.
+                        Rápido, agressivo e feito pra quem curte desempenho,
+                        adrenalina e design marcante.
                     </small>
                 </div>
                 <!-- SUV -->
@@ -240,11 +241,11 @@
                     </a>
                     <span class="nome-mod">SUV</span>
                     <small class="explicacao">
-                        Alto, confortável e versátil, ótimo para viagens e terrenos variados.
+                        Alto, confortável e versátil, ótimo para viagens e
+                        terrenos variados.
                     </small>
                 </div>
             </div>
-            
 
             <!--Mapas-->
             <div id="mapas">

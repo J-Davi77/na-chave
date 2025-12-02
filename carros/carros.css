@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a fonte efour pro */
+@font-face {
+    font-family: EfourPro;
+    src: url("../assets/fonts/Efourpro-OPrP.ttf");
+}
+
+/* Variáveis de cores */
+:root {
+    --bg-body: rgba(45, 45, 45);
+    --bg-cinza-claro: rgb(70, 70, 70);
+    --bg-header: rgba(70, 70, 70, 0.95);
+    --bg-azul1: rgb(0, 171, 255);
+    --bg-azul2: rgb(0, 110, 255);
+    --bg-azul3: rgb(5, 93, 209);
+    --text-primary: rgb(232, 237, 244);
+    --bg-tipo-carro: rgb(45, 35, 156);
+    --bg-active-link: linear-gradient(
+        rgba(0, 0, 120, 0.06),
+        rgba(0, 110, 255, 0.25)
+    );
+}
+
+/* Animação ao entrar no site */
+
+@keyframes show {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-family: EfourPro, sans-serif !important;
+    font-weight: bold !important;
+    color: var(--text-primary) !important;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Imagem da logo */
+h1 img {
+    width: 60px;
+    opacity: 0;
+    animation-delay: 1s;
+    transform: translateY(-100%);
+    animation: fadeIn 1.5s forwards;
+}
+
+body {
+    background-color: var(--bg-body) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Header */
+header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(4px);
+    height: 75px;
+    padding: 0 4%;
+    position: sticky;
+    top: 0;
+    z-index: 67;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 10px rgba(100, 100, 100, 0.25);
+    background-color: var(--bg-header);
+    transform: translateY(-100%);
+    animation: show 0.5s forwards;
+}
+
+/* Navbar principal */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1rem;
+    height: 100%;
+}
+
+/* Links de navegação */
+.navbar-link {
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+    display: flex;
+    min-width: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 500;
+    transition: transform 0.3s;
+    height: 100%;
+    position: relative;
+}
+
+.navbar-link span,
+.navbar-link img {
+    transition: all 0.15s;
+}
+
+.navbar-link:not(.link-active)::before {
+    content: "";
+    width: 0;
+    background-color: var(--bg-azul1);
+    height: 3px;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.navbar-link:hover span {
+    color: var(--bg-azul1);
+}
+
+/* Deixa a imagem azul ao passar o mouse */
+.navbar-link:hover img {
+    filter: invert(29%) sepia(94%) saturate(1868%) hue-rotate(199deg)
+        brightness(95%) contrast(101%);
+}
+
+.navbar-link:not(.link-active):hover::before {
+    width: 100%;
+}
+
+.navbar-link img {
+    width: 20px;
+}
+
+.link-active {
+    background: var(--bg-active-link);
+    color: var(--bg-azul1);
+}
+
+.link-active::before {
+    content: "";
+    width: 100%;
+    background-color: var(--bg-azul1);
+    height: 4px;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.link-active img {
+    filter: invert(29%) sepia(94%) saturate(1868%) hue-rotate(199deg)
+        brightness(95%) contrast(101%);
+}
+
+/* Botões de login e cadastro do header */
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.buttons-container button {
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins, sans-serif;
+    gap: 0.3rem;
+    padding: 0.5rem 0.6rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-azul2);
+    transition: all 0.2s;
+}
+
+.buttons-container a {
+    color: var(--bg-azul1);
+}
+
+.buttons-container img {
+    width: 18px;
+}
+
+#login-btn {
+    background: none;
+    border: 1.5px solid var(--bg-azul2);
+}
+
+#login-btn:hover {
+    transform: scale(1.08);
+    background-color: var(--bg-azul2);
+}
+
+#login-btn:hover a {
+    color: var(--text-primary);
+}
+
+#cadastro-btn img {
+    width: 20px;
+}
+
+#cadastro-btn:hover {
+    transform: scale(1.08);
+    background-color: var(--bg-azul3);
+}
+a {
+    text-decoration: none !important;
+}
+/* Botão do menu */
+#menu-btn {
+    display: none;
+    flex-direction: column;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    font-size: 12px;
+    right: 20px;
+    top: 15px;
+}
+
+#menu-btn img {
+    width: 40px;
+}
+
+@media screen and (max-width: 1080px) {
+    header {
+        flex-direction: column;
+        flex-wrap: nowrap !important;
+        padding: 0 0 1rem 0;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        height: 70px;
+        overflow: hidden;
+        transition: 0.5s;
+        transition: 0.5s;
+    }
+
+    #menu-btn {
+        display: flex;
+    }
+
+    header.show {
+        height: 450px;
+    }
+
+    #navbar {
+        height: auto;
+        flex-direction: column;
+        align-self: flex-start;
+        width: 100%;
+    }
+    .navbar-link {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+    .navbar-link img {
+        width: 25px;
+    }
+
+    .navbar-link:not(.link-active)::before {
+        display: none;
+    }
+
+    .buttons-container {
+        gap: 1.2rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .buttons-container button {
+        width: 100%;
+    }
+
+    .buttons-container a {
+        width: 45%;
+    }
+
+    .buttons-container button:hover {
+        transform: scale(1.04) !important;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    header {
+        height: 55px;
+    }
+    h1 {
+        margin-left: 0.6rem;
+        align-self: flex-start;
+    }
+
+    h1 img {
+        width: 40px;
+    }
+    #menu-btn {
+        top: 5px;
+    }
+}
