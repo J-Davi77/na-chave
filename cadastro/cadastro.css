@@ -29,10 +29,9 @@
 }
 
 body {
-    background: url("../assets/imgs/carrossel3.png");
-    background-repeat: no-repeat;
-    background-color: var(--bg-body);
-    background-size: 100% 100%;
+    background-image: url('../assets/imgs/carrossel3.png');
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,7 +42,7 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: radial-gradient(transparent, rgba(45, 45, 45, 0.8));
+    background: rgba(0, 0, 0, 0.65);
     backdrop-filter: blur(1px);
 }
 
@@ -253,6 +252,7 @@ label.onfocus {
     bottom: 0;
     left: 0;
     background-color: var(--text-link);
+    border-radius: 20px;
     height: 2.5px;
     width: 0;
     transition: width 0.2s;

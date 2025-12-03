@@ -92,7 +92,13 @@
             </button>
         </header>
 
-        <main class="d-flex align-items-center flex-column gap-5 mt-5">
+        <div id="modal-overlay">
+            <div id="modal">
+                
+            </div>
+        </div>
+
+        <main class="d-flex align-items-center flex-column gap-4">
             <!-- Carrossel -->
             <div
                 id="carrosselNachave"
@@ -110,7 +116,7 @@
                     <!-- SLIDE 2 — MAIS BUSCADOS -->
                     <div class="carousel-item" id="buscados">
                         <div
-                            class="d-flex flex-column align-items-center justify-content-center p-4"
+                            class="overlay d-flex flex-column align-items-center justify-content-center p-4"
                         >
                             <h2 class="nome-carrossel fw-bold fs-1">
                                 Mais buscados
@@ -129,7 +135,7 @@
                     <!-- SLIDE 3 — RECOMENDADOS -->
                     <div class="carousel-item" id="recomendados">
                         <div
-                            class="d-flex flex-column align-items-center justify-content-center p-4"
+                            class="overlay d-flex flex-column align-items-center justify-content-center p-4"
                         >
                             <h2 class="nome-carrossel fw-bold fs-1">
                                 Recomendados
@@ -167,7 +173,7 @@
                 </button>
             </div>
 
-            <h2 id="tipo">TIPOS DE CARROS</h2>
+            <h2 id="tipo">CATEGORIAS</h2>
             <!-- Barra de pesquisa-->
             <div id="search-container">
                 <img

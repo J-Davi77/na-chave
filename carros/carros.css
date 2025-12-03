@@ -74,12 +74,11 @@ header {
     align-items: center;
     justify-content: space-between;
     backdrop-filter: blur(4px);
-    height: 75px;
+    height: 90px;
     padding: 0 4%;
     position: sticky;
     top: 0;
     z-index: 67;
-    border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 10px rgba(100, 100, 100, 0.25);
     background-color: var(--bg-header);
     transform: translateY(-100%);
@@ -251,8 +250,7 @@ a {
         gap: 1.5rem;
         height: 70px;
         overflow: hidden;
-        transition: 0.5s;
-        transition: 0.5s;
+        transition: 0.2s ease-out;
     }
 
     #menu-btn {
@@ -322,7 +320,7 @@ a {
 
 #catalogo {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     gap: 1rem;
     width: 90%;
 }
@@ -331,9 +329,10 @@ a {
     background: var(--bg-cinza-claro);
     padding: 2rem;
     border-radius: 20px;
+    position: relative;
 }
 
-.car-img-container { 
+.car-img-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,11 +341,11 @@ a {
 .car-img-container img {
     width: 100%;
     aspect-ratio: 16 / 11;
-    max-width: 300px;
+    max-width: 350px;
 }
 
 .desc {
-    font-weight: 500; 
+    font-weight: 500;
     font-size: 0.8rem;
 }
 
@@ -393,17 +392,18 @@ a {
 
 .preco-container {
     margin: 0.9rem 0 0.1rem 0;
+    white-space: nowrap;
 }
 
 .preco {
-    font-size: clamp(1.3rem, 5.6vw, 2.4rem);
+    font-size: clamp(1.3rem, 4vw, 2.4rem);
     font-weight: 700;
     color: var(--bg-azul1);
     font-family: Poppins, sans-serif;
 }
 
 .moeda {
-    font-size: clamp(0.95rem, 4vw, 1.5rem);
+    font-size: clamp(1.3rem, 4vw, 2rem);
 }
 
 .diaria {
@@ -452,4 +452,47 @@ a {
     right: 0;
     opacity: 1;
     transform: rotate(0);
+}
+
+.categoria-badge {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: var(--bg-azul3);
+    width: 80px;
+    padding: 0.3rem 0;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
+.favorito-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 5%;
+    right: 5%;
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    background: none;
+    border-radius: 50%;
+    padding: 0.6rem;
+    box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.15);
+}
+
+.favorito-btn img {
+    transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.favorito-btn:hover img {
+    transform: scale(1.2);
+    filter: invert(29%) sepia(94%) saturate(1868%) hue-rotate(199deg)
+        brightness(95%) contrast(101%);
+}
+
+.tooltip {
+    --bs-tooltip-bg: var(--bg-body); 
+    --bs-tooltip-color: var(--text-primary);
 }
