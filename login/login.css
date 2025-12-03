@@ -13,14 +13,12 @@
 /* Variáveis de cores */
 :root {
     --bg-body: rgba(45, 45, 45);
-    --bg-header: rgba(45, 45, 45, 0.85);
     --bg-cinza-claro: rgb(84, 84, 84);
     --bg-azul1: #00abff;
     --bg-azul2: rgb(0, 110, 255);
     --bg-azul3: rgb(5, 93, 209);
     --text-primary: #e8edf4;
     --text-link: rgb(0, 67, 154);
-    --bg-active-link: rgb(0, 110, 255, 0.03);
 }
 
 * {
@@ -29,17 +27,40 @@
 }
 
 body {
-    background-color: var(--bg-body) !important;
+    background: url('../assets/imgs/carrossel3.png');
+    background-repeat: no-repeat;
+    background-color: var(--bg-body) ;
+    background-size: 100% 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100dvh;
 }
 
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(transparent, rgba(45, 45, 45, 0.8));
+    backdrop-filter: blur(1px);
+}
+
+@media screen and (max-width: 1050px) {
+    body {
+        background: linear-gradient(45deg, rgba(60, 60 , 60 ), rgba(50, 50, 50) , var(--bg-body));
+        background-repeat: no-repeat;
+    }
+
+    #overlay {
+        display: none;
+    }
+}
+
 h1 {
     font-size: clamp(32px, 5vw, 48px);
     letter-spacing: 1px;
 }
+
 @keyframes fadeIn {
     to {
         transform: translateY(0);
@@ -217,6 +238,22 @@ label.onfocus {
     text-decoration: none;
     color: var(--text-link);
     font-weight: 600;
+    position: relative;
+}
+
+#cadastro-p a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--text-link);
+    height: 2.5px;
+    width: 0;
+    transition: width 0.2s;
+}
+
+#cadastro-p a:hover::before {
+    width: 100%;
 }
 
 #inicio-link {

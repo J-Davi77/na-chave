@@ -20,6 +20,7 @@
     --bg-azul2: rgb(0, 110, 255);
     --bg-azul3: rgb(5, 93, 209);
     --text-primary: rgb(232, 237, 244);
+    --text-secondary: rgba(232, 237, 244, 0.85);
     --bg-tipo-carro: rgb(45, 35, 156);
     --bg-active-link: linear-gradient(
         rgba(0, 0, 120, 0.06),
@@ -387,7 +388,7 @@ a {
 }
 /* Busca dos carros */
 #search-container {
-    width: 100%;
+    width: 90%;
     max-width: 600px;
     position: relative;
     display: flex;
@@ -471,6 +472,7 @@ a {
     transition: all 0.8s;
     letter-spacing: 0.8px;
 }
+
 .tipo-carro {
     display: flex;
     flex-direction: column;
@@ -492,19 +494,20 @@ a {
 
 .explicacao {
     font-size: 0.8rem;
+    font-weight: 200 !important;
     max-width: 180px;
     text-align: center;
     margin-top: 5px;
     color: var(--text-secondary);
 }
 
-.carro-img-container:hover:hover .explicacao {
+.carro-img-container:hover .explicacao {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 .tipo-carro.animated {
-    animation: fadeIn 0.8s forwards;
+    animation: fadeIn 0.5s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .tipo-carro.hide {
@@ -517,7 +520,7 @@ a {
     align-items: center;
     justify-content: center;
     padding: 0.4rem;
-    background-color: var(--bg-tipo-carro);
+    background-color: var(--bg-azul3);
     width: clamp(100px, 14vw, 200px);
     height: clamp(100px, 14vw, 200px);
     box-shadow: 0 2px 10px 6px rgba(62, 62, 62, 0.4);
@@ -532,7 +535,7 @@ a {
 }
 
 .carro-img-container:hover {
-    background-color: var(--bg-azul3);
+    background-color: var(--bg-azul2);
 }
 
 .carro-img-container:hover img {
@@ -557,6 +560,7 @@ footer {
     gap: 50px;
     align-items: center;
 }
+
 @media (max-width: 900px) {
     #tipos-carros {
         display: grid;

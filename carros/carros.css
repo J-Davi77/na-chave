@@ -19,6 +19,7 @@
     --bg-azul2: rgb(0, 110, 255);
     --bg-azul3: rgb(5, 93, 209);
     --text-primary: rgb(232, 237, 244);
+    --text-secondary: rgba(232, 237, 244, 0.75);
     --bg-tipo-carro: rgb(45, 35, 156);
     --bg-active-link: linear-gradient(
         rgba(0, 0, 120, 0.06),
@@ -220,9 +221,11 @@ header {
     transform: scale(1.08);
     background-color: var(--bg-azul3);
 }
+
 a {
     text-decoration: none !important;
 }
+
 /* Botão do menu */
 #menu-btn {
     display: none;
@@ -313,4 +316,140 @@ a {
     #menu-btn {
         top: 5px;
     }
+}
+
+/* Catálogo de carros */
+
+#catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    width: 90%;
+}
+
+.card-car {
+    background: var(--bg-cinza-claro);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.car-img-container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-img-container img {
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    max-width: 300px;
+}
+
+.desc {
+    font-weight: 500; 
+    font-size: 0.8rem;
+}
+
+.nome {
+    font-size: clamp(0.95rem, 1.6vw, 1.4rem);
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    white-space: nowrap;
+    font-family: Poppins, sans-serif;
+}
+
+.modelo {
+    color: var(--bg-azul1);
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.grupo-informacao {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.informacao {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.informacao img {
+    width: 18px;
+    opacity: 0.75;
+}
+
+.valor {
+    color: var(--text-secondary);
+    font-weight: 350;
+}
+
+.preco-container {
+    margin: 0.9rem 0 0.1rem 0;
+}
+
+.preco {
+    font-size: clamp(1.3rem, 5.6vw, 2.4rem);
+    font-weight: 700;
+    color: var(--bg-azul1);
+    font-family: Poppins, sans-serif;
+}
+
+.moeda {
+    font-size: clamp(0.95rem, 4vw, 1.5rem);
+}
+
+.diaria {
+    color: var(--text-secondary);
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+}
+
+.detalhes-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.detalhes-btn {
+    border: none;
+    background: var(--bg-azul2);
+    color: var(--text-primary);
+    font-family: Poppins, sans-serif;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-content img {
+    position: absolute;
+    right: 10%;
+    transform: rotate(360deg);
+    opacity: 0;
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.detalhes-btn:hover {
+    transform: scale(1.04);
+    background-color: var(--bg-azul3);
+}
+
+.detalhes-btn:hover img {
+    right: 0;
+    opacity: 1;
+    transform: rotate(0);
 }

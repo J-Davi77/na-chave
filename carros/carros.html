@@ -93,72 +93,270 @@
         </header>
 
         <main class="d-flex align-items-center flex-column gap-5 mt-5">
-            <div class="card-car">
-                <div class="car-img-container">
-                    <img src="" alt="" loading="lazy" />
-                </div>
-                <h2>VOLKSVAGEN <span class="modelo">NIVUS</span></h2>
-                <div class="informacoes">
-                    <div class="grupo-informacao">
+            <div id="catalogo">
+                <!-- Card de carro -->
+                <div class="card-car">
+                    <div class="car-img-container">
+                        <img
+                            src="./car-imgs/nivus.png"
+                            alt="Volkswagen Nivus"
+                            width="200"
+                            loading="lazy"
+                        />
+                    </div>
+                    <h2 class="nome">
+                        VOLKSVAGEN <span class="modelo">NIVUS</span>
+                    </h2>
+
+                    <div class="informacoes">
                         <div class="informacao">
                             <span class="desc">1.0 200 FLEX TSI HIGHLINE</span>
                         </div>
 
-                        <div class="informacao">
-                            <span class="atributo">
+                        <div class="grupo-informacao">
+                            <div class="informacao">
                                 <img
                                     src="../assets/imgs/calendar.svg"
-                                    alt=""
+                                    alt="calendário"
                                     loading="lazy"
-                                    width="15"
                                 />
-                            </span>
-                            <span class="valor">2020</span>
-                        </div>
-                    </div>
-                    <div class="informacao">
-                        <div>
-                            <span class="atributo">
-                                <img
-                                    src="../assets/imgs/odometer.svg"
-                                    alt="Quantidade de km rodados"
-                                    loading="lazy"
-                                    width="15"
-                                />
-                            </span>
-                            <span class="valor"><span class="km-rodados">0</span> Km</span>
-                        </div>
-                    </div>
-                    <div class="grupo-informacao">
-                        <div class="informacao">
-                            <span class="atributo">
-                                <img
-                                    src="../assets/imgs/marcha.svg"
-                                    alt="tipo
-                                de marcha"
-                                    loading="lazy"
-                                    width="20"
-                                />
-                            </span>
-                            <span class="valor">Auto.</span>
+                                <span class="valor ano">2026</span>
+                            </div>
+                            <div class="informacao">
+                                <div>
+                                    <span class="atributo">
+                                        <img
+                                            src="../assets/imgs/odometer.svg"
+                                            alt="Quantidade de km rodados"
+                                            loading="lazy"
+                                        />
+                                    </span>
+                                    <span class="valor"
+                                        ><span class="km-rodados">0</span>
+                                        Km</span
+                                    >
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="informacao">
-                            <span class="atributo">
-                                <img
-                                    src="../assets/imgs/gasolina.svg"
-                                    alt=""
-                                    loading="lazy"
-                                    width="20"
-                                />
-                            </span>
-                            <span class="valor">GASOLINA E ÁLCOOL</span>
+                        <div class="grupo-informacao">
+                            <div class="informacao">
+                                <span class="atributo">
+                                    <img
+                                        src="../assets/imgs/marcha.svg"
+                                        alt="tipo
+                                de marcha"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="valor marcha">Auto.</span>
+                            </div>
+                            <div class="informacao">
+                                <span class="atributo">
+                                    <img
+                                        src="../assets/imgs/gasolina.svg"
+                                        alt="gasolina"
+                                    />
+                                </span>
+                                <span class="valor gasolina"
+                                    >GASOLINA/ÁLCOOL</span
+                                >
+                            </div>
+                        </div>
+
+                        <div class="preco-container">
+                            <span class="moeda">R$ </span>
+                            <span class="preco"> 230,00</span>
+                            <span class="diaria">/ DIA</span>
+                        </div>
+                        <div class="detalhes-btn-container">
+                            <button class="detalhes-btn">
+                                <span class="btn-content">
+                                    Ver detalhes
+                                    <img
+                                        src="../assets/imgs/pesquisa.svg"
+                                        width="20"
+                                        alt="lupa"
+                                    />
+                                </span>
+                            </button>
                         </div>
                     </div>
-                    <div class="preco-container">
-                        <span class="moeda">R$ </span>
-                        <span class="preco"> 230,00</span>
-                        <span class="diaria">/ DIA</span>
+                </div>
+                <div class="card-car">
+                    <div class="car-img-container">
+                        <img
+                            src="./car-imgs/nivus.png"
+                            alt="Volkswagen Nivus"
+                            width="200"
+                            loading="lazy"
+                        />
+                    </div>
+                    <h2 class="nome">
+                        VOLKSVAGEN <span class="modelo">NIVUS</span>
+                    </h2>
+
+                    <div class="informacoes">
+                        <div class="informacao">
+                            <span class="desc">1.0 200 FLEX TSI HIGHLINE</span>
+                        </div>
+
+                        <div class="grupo-informacao">
+                            <div class="informacao">
+                                <img
+                                    src="../assets/imgs/calendar.svg"
+                                    alt="calendário"
+                                    loading="lazy"
+                                />
+                                <span class="valor ano">2026</span>
+                            </div>
+                            <div class="informacao">
+                                <div>
+                                    <span class="atributo">
+                                        <img
+                                            src="../assets/imgs/odometer.svg"
+                                            alt="Quantidade de km rodados"
+                                            loading="lazy"
+                                        />
+                                    </span>
+                                    <span class="valor"
+                                        ><span class="km-rodados">0</span>
+                                        Km</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grupo-informacao">
+                            <div class="informacao">
+                                <span class="atributo">
+                                    <img
+                                        src="../assets/imgs/marcha.svg"
+                                        alt="tipo
+                                de marcha"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="valor marcha">Auto.</span>
+                            </div>
+                            <div class="informacao">
+                                <span class="atributo">
+                                    <img
+                                        src="../assets/imgs/gasolina.svg"
+                                        alt="gasolina"
+                                    />
+                                </span>
+                                <span class="valor gasolina"
+                                    >GASOLINA/ÁLCOOL</span
+                                >
+                            </div>
+                        </div>
+
+                        <div class="preco-container">
+                            <span class="moeda">R$ </span>
+                            <span class="preco"> 230,00</span>
+                            <span class="diaria">/ DIA</span>
+                        </div>
+                        <div class="detalhes-btn-container">
+                            <button class="detalhes-btn">
+                                <span class="btn-content">
+                                    Ver detalhes
+                                    <img
+                                        src="../assets/imgs/pesquisa.svg"
+                                        width="20"
+                                        alt="lupa"
+                                    />
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-car">
+                    <div class="car-img-container">
+                        <img
+                            src="./car-imgs/nivus.png"
+                            alt="Volkswagen Nivus"
+                            width="200"
+                            loading="lazy"
+                        />
+                    </div>
+                    <h2 class="nome">
+                        VOLKSVAGEN <span class="modelo">NIVUS</span>
+                    </h2>
+
+                    <div class="informacoes">
+                        <div class="informacao">
+                            <span class="desc">1.0 200 FLEX TSI HIGHLINE</span>
+                        </div>
+
+                        <div class="grupo-informacao">
+                            <div class="informacao">
+                                <img
+                                    src="../assets/imgs/calendar.svg"
+                                    alt="calendário"
+                                    loading="lazy"
+                                />
+                                <span class="valor ano">2026</span>
+                            </div>
+                            <div class="informacao">
+                                <div>
+                                    <span class="atributo">
+                                        <img
+                                            src="../assets/imgs/odometer.svg"
+                                            alt="Quantidade de km rodados"
+                                            loading="lazy"
+                                        />
+                                    </span>
+                                    <span class="valor"
+                                        ><span class="km-rodados">0</span>
+                                        Km</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grupo-informacao">
+                            <div class="informacao">
+                                <span class="atributo">
+                                    <img
+                                        src="../assets/imgs/marcha.svg"
+                                        alt="tipo
+                                de marcha"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="valor marcha">Auto.</span>
+                            </div>
+                            <div class="informacao">
+                                <span class="atributo">
+                                    <img
+                                        src="../assets/imgs/gasolina.svg"
+                                        alt="gasolina"
+                                    />
+                                </span>
+                                <span class="valor gasolina"
+                                    >GASOLINA/ÁLCOOL</span
+                                >
+                            </div>
+                        </div>
+
+                        <div class="preco-container">
+                            <span class="moeda">R$ </span>
+                            <span class="preco"> 230,00</span>
+                            <span class="diaria">/ DIA</span>
+                        </div>
+                        <div class="detalhes-btn-container">
+                            <button class="detalhes-btn">
+                                <span class="btn-content">
+                                    Ver detalhes
+                                    <img
+                                        src="../assets/imgs/pesquisa.svg"
+                                        width="20"
+                                        alt="lupa"
+                                    />
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
