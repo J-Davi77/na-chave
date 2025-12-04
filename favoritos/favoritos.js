@@ -223,7 +223,7 @@ let carros = JSON.parse(localStorage.getItem("carros")) || [
 // Função pra adicionar cada card de carro
 function renderCars(cars) {
     if (cars.length === 0) {
-        catalogo.innerHTML = `<p class="not-found">Nenhum carro encontrado :(</p>`;
+        catalogo.innerHTML = `<p class="not-found">Você ainda não favoritou nenhum carro :(</p>`;
     }
     cars.forEach((car) => {
         catalogo.insertAdjacentHTML(
@@ -334,7 +334,9 @@ function renderCars(cars) {
     });
 }
 
-renderCars(carros);
+const favoritos = carros.filter((car) => car.favoritado == true);
+
+renderCars(favoritos);
 
 const cardCarros = document.querySelectorAll(".card-car");
 
@@ -353,23 +355,18 @@ const observer = new IntersectionObserver(
     }
 );
 
-let favoritosArr = JSON.parse(localStorage.getItem("favoritos")) || [];
-
 function favoritar(id, button) {
     const carro = carros.find((car) => car.id == id);
     if (!carro) return;
 
     if (carro.favoritado) {
-        favoritosArr = favoritosArr.filter((fav) => fav.id !== id);
         button.querySelector("img").src = "../assets/imgs/heart.svg";
         carro.favoritado = false;
     } else {
-        favoritosArr.push(carro);
         button.querySelector("img").src = "../assets/imgs/heart-filled.svg";
         carro.favoritado = true;
     }
 
-    localStorage.setItem("favoritos", JSON.stringify(favoritosArr));
     localStorage.setItem("carros", JSON.stringify(carros));
 }
 

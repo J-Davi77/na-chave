@@ -32,6 +32,7 @@ body {
     background-image: url('../assets/imgs/carrossel3.png');
     background-size: cover;
     background-position: center;
+    background-color: var(--bg-body);
     display: flex;
     align-items: center;
     justify-content: center;
