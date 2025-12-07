@@ -442,18 +442,15 @@ a {
 /* Tipo dos carros */
 
 #tipo {
-    font-size: clamp(24px, 5vw, 60px) !important;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-#tipo {
     background: rgba(0, 0, 0, 0.1);
     padding: 15px;
     width: 100%;
     text-align: center;
-    font-size: 2rem;
     margin-top: 40px;
     border-radius: 10px;
+    font-size: clamp(24px, 5vw, 60px) !important;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #tipos-carros {
@@ -467,12 +464,13 @@ a {
     gap: 0.1rem;
     align-content: center;
     gap: 0.1rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .tipo-carro {
     text-decoration: none;
     font-family: Poppins, sans-serif;
-    font-size: clamp(0.6rem, 3vw, 1.1rem);
     font-size: clamp(0.6rem, 3vw, 1.1rem);
     color: var(--text-primary);
     position: relative;
@@ -481,19 +479,16 @@ a {
     align-items: center;
     justify-content: center;
     gap: 0.6rem;
-    gap: 0.6rem;
     opacity: 0;
     transform: translateY(40%);
     transition: all 0.8s;
     letter-spacing: 0.8px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--bg-tipo-carro);
 }
-
-.tipo-carro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .tipo-carro small {
     opacity: 0;
     visibility: hidden;
@@ -556,26 +551,36 @@ a {
 .carro-img-container:hover img {
     transform: rotate(-5deg);
 }
+/* FOOTER */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    border: 10px rgb(red, green, blue);
+}
 
-#mapas {
+footer h4 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+footer div,
+footer section {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 100px;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#mapas * {
-    width: 95%;
+footer p {
+    color: white;
 }
-
-footer {
-    text-align: center !important;
-    margin-bottom: 20px;
-    display: flex;
-    gap: 50px;
-    align-items: center;
-}
-
 @media (max-width: 900px) {
     #tipos-carros {
         display: grid;
@@ -583,7 +588,6 @@ footer {
         gap: 1.5rem;
     }
 }
-
 /* =============== AJUSTES PARA CELULAR (até 600px) =============== */
 @media (max-width: 600px) {
     /* TÍTULO */

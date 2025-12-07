@@ -26,3 +26,20 @@ function handleBlur(inp) {
 maskPasswordImg.addEventListener('click', maskPassword);
 inputs.forEach((inp) => inp.addEventListener("focus", () => handleFocus(inp)));
 inputs.forEach((inp) => inp.addEventListener("blur", () => handleBlur(inp)));
+
+document.getElementById("submit-btn").addEventListener('click', function(){
+    const login_correto = {
+        nome: "administrador",
+        senha: "nachave"
+    };
+
+    let nome_ins = document.getElementById("nome").value;
+    let senha_ins = document.getElementById("senha").value;
+
+    if(login_correto.nome === nome_ins && login_correto.senha === senha_ins){
+        window.location.href = "../index.html";
+    }
+    else{
+        alert("Login ou senha inválidos.");
+    }
+});
