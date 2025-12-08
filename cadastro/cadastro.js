@@ -25,3 +25,16 @@ function handleBlur(inp) {
 maskPasswordImg.addEventListener("click", maskPassword);
 inputs.forEach((inp) => inp.addEventListener("focus", () => handleFocus(inp)));
 inputs.forEach((inp) => inp.addEventListener("blur", () => handleBlur(inp)));
+
+document.getElementById("submit-btn").addEventListener("click", function(event){
+    event.preventDefault();
+    const nome = document.getElementById("nome").value;
+    const senha = document.getElementById("senha").value;
+    const email = document.getElementById("email").value;
+
+    if(nome && senha && email){
+        window.location.href = "../index.html";
+    };
+
+    
+})

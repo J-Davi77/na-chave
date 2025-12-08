@@ -7,8 +7,7 @@
 /* Define a fonte efour pro */
 @font-face {
     font-family: EfourPro;
-    src: url("assets/fonts/Efourpro-OPrP.ttf");
-    src: url("assets/fonts/Efourpro-OPrP.ttf");
+    src: url("../assets/fonts/Efourpro-OPrP.ttf");
 }
 
 /* Variáveis de cores */
@@ -66,7 +65,9 @@ body {
     background-color: var(--bg-body) !important;
     color: var(--text-primary) !important;
 }
-
+main {
+    margin-bottom: 50px;
+}
 /* Header */
 header {
     width: 100%;
@@ -189,6 +190,7 @@ header {
     border-radius: 5px;
     background-color: var(--bg-azul2);
     transition: all 0.2s;
+    white-space: nowrap;
 }
 
 .buttons-container a {
@@ -319,238 +321,55 @@ a {
 
 /* Main */
 
-/* Carrossel */
+/* H1 */
 
-#carrosselNachave {
-    margin: 0;
-    width: 100%;
-}
-
-.carousel-inner {
-    height: 100%;
-}
-
-.carousel-item {
-    background: var(--bg-azul3);
-    height: 100% !important;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    aspect-ratio: 2 / 1;
-}
-
-.overlay {
-    background-color: rgba(0, 0, 0, 0.65);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/*Carrossel 1 (hero)*/
-#hero {
-    background-image: url("assets/imgs/hero.png");
-    background-size: cover;
-
-}
-
-.carousel-item .btn {
-    transition: 0.2s;
-    font-family: Poppins, sans-serif;
-}
-.carousel-item .btn:hover {
-    transform: scale(1.1);
-}
-
-/*Carrossel 2 (Mais Buscados)*/
-#buscados {
-    background-image: url("assets/imgs/dreamina-2025-11-30-3512-Close-up\ do\ interior\ de\ um\ carro\ de\ luxo....jpeg");
-    color: var(--text-primary);
-    font-family: Poppins, sans-serif;
-}
-
-#buscados button {
-    background-color: var(--bg-azul2) !important;
-    border: 0px;
-}
-
-#buscados p {
-    font-size: 20px;
-    color: var(--text-primary);
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
-    letter-spacing: 2px;
-}
-/* Carrossel 3 (Recomendados) */
-
-#recomendados {
-    font-family: Poppins, sans-serif;
-    background-image: url("assets/imgs/carrossel3.png");
-}
-
-#recomendados p {
-    width: clamp(130px, 90%, 500px);
-    font-size: clamp(14px, 3vw, 20px);
-    color: var(--text-primary);
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
-    letter-spacing: 2px;
-}
-
-#recomendados button {
-    background-color: var(--bg-azul2) !important;
-    border: 0px;
-}
-/* Busca dos carros */
-#search-container {
-    width: 90%;
-    max-width: 600px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    transform: translateY(100%);
-    animation: fadeIn 1s forwards;
-}
-#search-input {
-    background-color: var(--bg-cinza-claro);
-    padding: 0.8rem 3.5rem;
-    border: none;
-    outline: none;
-    color: var(--text-primary);
-    border-radius: 50px;
-    width: 100%;
-    transition: box-shadow 0.25s;
-    box-shadow: 1px 1px 7px 3px rgba(100, 100, 100, 0.25);
-}
-
-#search-input:focus {
-    box-shadow: 1px 1px 12px 7px rgba(100, 100, 100, 0.25);
-}
-
-#search-img {
-    position: absolute;
-    z-index: 1;
-    left: 13px;
-}
-
-#search-input::placeholder {
-    color: var(--text-primary);
-    opacity: 0.6;
-}
-
-/* Tipo dos carros */
-
-#tipo {
-    background: rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    width: 100%;
-    text-align: center;
-    margin-top: 40px;
-    border-radius: 10px;
+main h2 {
     font-size: clamp(24px, 5vw, 60px) !important;
-    margin-top: 50px;
-    margin-bottom: 50px;
 }
-
-#tipos-carros {
-    width: 100%;
-    padding: 0 5%;
-    padding: 0 5%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: center;
-    gap: 0.1rem;
-    align-content: center;
-    gap: 0.1rem;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.tipo-carro {
-    text-decoration: none;
-    font-family: Poppins, sans-serif;
-    font-size: clamp(0.6rem, 3vw, 1.1rem);
-    color: var(--text-primary);
-    position: relative;
+.select-container {
     display: flex;
     flex-direction: column;
+    gap: 8px;
+}
+
+.select-container label {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
     align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    opacity: 0;
-    transform: translateY(40%);
-    transition: all 0.8s;
-    letter-spacing: 0.8px;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(8px);
-    border: 1px solid var(--bg-tipo-carro);
-}
-.tipo-carro small {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: 0.3s ease;
 }
 
-.tipo-carro:hover small {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.explicacao {
-    font-size: 0.8rem;
-    font-weight: 200 !important;
-    max-width: 180px;
-    text-align: center;
-    margin-top: 5px;
-    color: var(--text-secondary);
-}
-
-.carro-img-container:hover .explicacao {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-.tipo-carro.animated {
-    animation: fadeIn 0.5s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.tipo-carro.hide {
-    opacity: 0;
-    transform: translateY(40%);
-}
-
-.carro-img-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.4rem;
-    background-color: var(--bg-azul3);
-    width: clamp(100px, 14vw, 200px);
-    height: clamp(100px, 14vw, 200px);
-    box-shadow: 0 2px 10px 6px rgba(62, 62, 62, 0.4);
-    border-radius: 50%;
-    transition: background-color 0.3s;
-}
-
-.carro-img-container img {
+.select-container select {
+    padding: 1rem;
+    border-radius: 8px;
     width: 100%;
-    transition: transform 0.3s;
-    border-radius: 50%;
+    color: white;
+    background-color: var(--bg-body);
+    outline: none;
+    transition: 0.2s;
 }
 
-.carro-img-container:hover {
-    background-color: var(--bg-azul2);
+#melhor {
+    color: var(--text-secondary)
 }
 
-.carro-img-container:hover img {
-    transform: rotate(-5deg);
+.select-container select:focus {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
+.faq {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background-color: var(--bg-cinza-claro);
+    box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.25);
+}
+
+#text_duvida {
+    font-size: 30px;
+    text-align: center;
+}
+
 /* FOOTER */
 .footer-grid {
     display: grid;
@@ -594,10 +413,9 @@ footer p {
         grid-column: span 1;
     }
 }
-.feedback form > *{
+.feedback form > * {
     margin-bottom: 10px;
 }
-
 
 @media (max-width: 1200px) {
     .footer-grid {
@@ -623,7 +441,7 @@ footer p {
     footer form {
         width: 100%;
     }
-        header.show {
+    header.show {
         height: 500px;
     }
     h1 img {
@@ -640,7 +458,7 @@ footer p {
 }
 /* AJUSTES MINI-CELULAR (até 400px)*/
 @media (max-width: 400px) {
-    .footer-grid{
+    .footer-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;

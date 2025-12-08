@@ -68,13 +68,13 @@ body {
 
 #detalhes-overlay {
     position: fixed;
-    transform: translateX(100%);
+    transform: translateX(150%);
     overflow: auto;
     z-index: 100;
     background-color: var(--bg-body);
     height: 100vh;
     width: 100vw;
-    transition: 0.35s;
+    transition: 0.4s;
 }
 
 #detalhes-overlay.show {
@@ -588,43 +588,7 @@ a {
 #menu-btn img {
     width: 40px;
 }
-/* FOOTER */
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 40px;
-    border: 10px rgb(red, green, blue);
-}
 
-footer h4 {
-    color: white;
-    font-size: 20px;
-    text-align: center;
-}
-
-footer a {
-    color: white;
-    font-size: 15px;
-    text-decoration: none;
-    text-align: center;
-}
-footer div,
-footer section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-footer p {
-    color: white;
-}
-@media (max-width: 900px) {
-    #tipos-carros {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 1.5rem;
-    }
-}
 @media screen and (max-width: 1080px) {
     header {
         flex-direction: column;
@@ -700,6 +664,100 @@ footer p {
     }
 }
 
+/* FOOTER */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+}
+
+footer h4 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+footer div,
+footer section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer p {
+    color: white;
+}
+.feedback {
+    grid-column: span 1;
+}
+
+@media (max-width: 1200px) {
+    .feedback {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 600px) {
+    .feedback {
+        grid-column: span 1;
+    }
+}
+.feedback form > * {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .feedback {
+        grid-column: span 3;
+    }
+}
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .feedback {
+        grid-column: span 1;
+    }
+
+    footer form {
+        width: 100%;
+    }
+    header.show {
+        height: 500px;
+    }
+    h1 img {
+        width: 45px;
+    }
+    .buttons-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .buttons-container button {
+        width: 100%;
+    }
+}
+/* AJUSTES MINI-CELULAR (até 400px)*/
+@media (max-width: 400px) {
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
 /* Catálogo de carros */
 
 #catalogo {
