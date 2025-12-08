@@ -30,7 +30,6 @@
         <link rel="stylesheet" href="favoritos.css" />
     </head>
     <body>
-        
         <div id="detalhes-overlay">
             <button id="voltar-btn">
                 <img src="../assets/imgs/seta.svg" alt="seta" width="30" />
@@ -64,9 +63,10 @@
                     ></a
                 >
                 <a class="navbar-link link-active" href="#">
-                    <img src="../assets/imgs/heart-filled.svg" alt="Favoritos" /><span
-                        >Favoritos</span
-                    ></a
+                    <img
+                        src="../assets/imgs/heart-filled.svg"
+                        alt="Favoritos"
+                    /><span>Favoritos</span></a
                 >
                 <a class="navbar-link" href="../ajuda/ajuda.html">
                     <img src="../assets/imgs/ajuda.svg" alt="Ajuda" /><span
@@ -95,82 +95,87 @@
             </button>
         </header>
 
-        <main class="d-flex align-items-center flex-column gap-5 mt-5">
+        <main class="d-flex align-items-center flex-column gap-5 mt-5 mb-5">
             <div id="catalogo"></div>
         </main>
-               <!-- Footer-->
-               <footer class="py-5 bg-dark">
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
             <div class="container footer-grid">
-       
-            <div class="social">
-                <h4>Redes sociais</h4>
-                <!-- <img src="/assets/imgs/instagram.jpeg" alt="Instagram"> -->
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-                <a href="https://www.facebook.com" target="_blank">facebook</a>
-                <a href="x.com" target="_blank">X</a>
-                <a href="www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fen%2F&lang=en&enter_method=mandatory" target="_blank">Tiktok</a>
-                <a href="https://www.linkedin.com" target="_blank">Linkedin</a>
+                <div class="social">
+                    <h4>Redes sociais</h4>
+                    <!-- <img src="/assets/imgs/instagram.jpeg" alt="Instagram"> -->
+                    <a href="https://www.instagram.com" target="_blank"
+                        >Instagram</a
+                    >
+                    <a href="https://www.facebook.com" target="_blank"
+                        >facebook</a
+                    >
+                    <a href="x.com" target="_blank">X</a>
+                    <a
+                        href="www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fen%2F&lang=en&enter_method=mandatory"
+                        target="_blank"
+                        >Tiktok</a
+                    >
+                    <a href="https://www.linkedin.com" target="_blank"
+                        >Linkedin</a
+                    >
+                </div>
+
+                <div class="navegacao">
+                    <h4>Navegação rápida</h4>
+                    <a href="#">Home</a>
+                    <a href="#">Serviços</a>
+                    <a href="#">Produtos</a>
+                    <a href="#">Portfólio</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Suporte</a>
+                </div>
+                <section class="feedback">
+                    <h4>Feedback</h4>
+                    <p style="text-align: center">
+                        Nos diga o que achou da plataforma. Seu feedback nos
+                        ajuda a melhorar!
+                    </p>
+
+                    <form id="feedback-form">
+                        <textarea
+                            id="feedback-text"
+                            class="form-control p-3"
+                            placeholder="Digite seu feedback..."
+                        ></textarea>
+
+                        <button
+                            type="submit"
+                            id="btn-enviar-feedback"
+                            class="btn btn-primary btn-lg w-100 d-flex align-items-center justify-content-center gap-2"
+                        >
+                            <span>Enviar feedback</span>
+                            <img
+                                src="../assets/imgs/send.svg"
+                                alt="Enviar feedback"
+                                width="30"
+                            />
+                        </button>
+                    </form>
+                </section>
+
+                <div class="informa">
+                    <h4>Informações sobre a empresa</h4>
+                    <a href="#">Sobre nós</a>
+                    <a href="#">História da empresa</a>
+                    <a href="#">Política de privacidade</a>
+                    <a href="#">Termos de uso</a>
+                </div>
+
+                <div class="contato">
+                    <h4>Contato</h4>
+                    <a href="#">Whatsapp</a>
+                    <a href="#">Telefone</a>
+                    <a href="#">Endereço físico</a>
+                    <a href="#">Horário de funcionamento</a>
+                    <a href="#">Abrir no maps</a>
+                </div>
             </div>
-
-            <div class="navegacao">
-                <h4>Navegação rápida</h4>
-                <a href="#">Home</a>
-                <a href="#">Serviços</a>
-                <a href="#">Produtos</a>
-                <a href="#">Portfólio</a>
-                <a href="#">FAQ</a>
-                <a href="#">Suporte</a>
-            </div>
-          <section
-                class="feedback"
-          
-            >
-            <h4>Feedback</h4>
-            <p style="text-align: center;">
-                Nos diga o que achou da plataforma. Seu feedback nos ajuda a
-                melhorar!
-            </p>
-
-            <form id="feedback-form">
-            <textarea
-                    id="feedback-text"
-                    class="form-control p-3"
-                    placeholder="Digite seu feedback..."
-             ></textarea>
-
-            <button
-                    type="submit"
-                    id="btn-enviar-feedback"
-                    class="btn btn-primary btn-lg w-100 d-flex align-items-center justify-content-center gap-2"
-            >
-                    <span>Enviar feedback</span>
-                    <img
-                        src="../assets/imgs/send.svg"
-                        alt="Enviar feedback"
-                        width="30"
-                    />
-                </button>
-            </form>
-        </section>
-
-            <div class="informa">
-                <h4>Informações sobre a empresa</h4>
-                <a href="#">Sobre nós</a>
-                <a href="#">História da empresa</a>
-                <a href="#">Política de privacidade</a>
-                <a href="#">Termos de uso</a>
-            </div>
-
-            <div class="contato">
-                <h4>Contato</h4>
-                <a href="#">Whatsapp</a>
-                <a href="#">Telefone</a>
-                <a href="#">Endereço físico</a>
-                <a href="#">Horário de funcionamento</a>
-                <a href="#">Abrir no maps</a>
-            </div>
-
-           </div>
         </footer>
     </body>
 </html>
